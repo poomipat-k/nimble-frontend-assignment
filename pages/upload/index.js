@@ -15,10 +15,10 @@ const UploadPage = () => {
 
   const onFileUploadHandler = () => {
     const formData = new FormData();
-
-    formData.append('csvFile', selectedFile, selectedFile.name);
-    console.log(formData);
-    axios.post('http://localhost:5000/api/keywords/upload', formData);
+    if (selectedFile) {
+      formData.append('csvFile', selectedFile, selectedFile.name);
+      axios.post('http://localhost:5000/api/keywords/upload', formData);
+    }
   };
   console.log('===selectedFile', selectedFile);
   return (
