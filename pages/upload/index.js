@@ -20,7 +20,7 @@ const UploadPage = () => {
       axios.post('http://localhost:5000/api/keywords/upload', formData);
     }
   };
-  console.log('===selectedFile', selectedFile);
+
   return (
     <div>
       <h1>Upload Keywords</h1>
